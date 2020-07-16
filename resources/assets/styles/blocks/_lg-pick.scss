@@ -1,0 +1,31 @@
+/* stylelint-disable */
+.lg-pick {
+  $root: &;
+
+  position: relative;
+  padding: 0;
+  margin: 0;
+  max-height: gutter(4);
+  display: flex;
+  color: $light;
+  overflow: hidden;
+  transition: $transition;
+
+  &__wrapper,
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: gutter(0.5) gutter(1.2);
+    font-size: 25px;
+
+    &:hover {
+      color: $special;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

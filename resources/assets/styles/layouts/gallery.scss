@@ -1,0 +1,19 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: gutter(1);
+  margin: 0;
+  padding: 0;
+
+  @include media(">=md") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__imagewrapper {
+    height: gutter(30);
+  }
+
+  &__image {
+    @extend %image;
+  }
+}
