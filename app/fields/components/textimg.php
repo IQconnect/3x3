@@ -7,10 +7,8 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $textimg = new FieldsBuilder('textimg',['label' => 'Tekst ze zdjęciami']);
 
 $textimg
-		->addText('titletext', ['label' => 'Tytuł koło zdjęcia'])
-		->addWysiwyg('subtext', ['label' => 'Tekst pod tytułem'])
+		->addFields(get_field_partial('components.headline'))
 		->addWysiwyg('maintext', ['label' => 'Tekst koło zdjęcia'])
-		->addImage('imgup', ['label' => 'Małe zdjecie na górze'])
-		->addImage('imgdown', ['label' => 'Małe zdjecie na dole'])
-		->addImage('imglong', ['label' => 'Duże zdjęcie']);
+		->addImage('imgbg', ['label' => 'Zdjecie w tle'])
+		->addImage('imglogo', ['label' => 'Zdjecie logo']);
 return $textimg;

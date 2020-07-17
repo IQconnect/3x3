@@ -42,11 +42,13 @@
 @import "blocks/lg-pick";
 @import "blocks/nav";
 @import "blocks/contact-header";
+@import "blocks/_headline";
 
 /** Layouts */
 @import "layouts/header";
 @import "layouts/hero";
 @import "layouts/menu";
+@import "layouts/textimg";
 @import "layouts/footer";
 @import "layouts/popup-flat";
 @import "layouts/_modal.scss";

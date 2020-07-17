@@ -1,0 +1,12 @@
+.headline {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+
+  &__title {
+    @extend %special;
+    @extend .title;
+
+    color: $black;
+  }
+}
