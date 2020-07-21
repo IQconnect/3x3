@@ -35,7 +35,10 @@
 @import "components/section";
 @import "components/text";
 @import "components/button";
-@import "components/_fpnav";
+@import "components/fpnav/_fpnavmain";
+@import "components/fpnav/_fpnav0";
+@import "components/fpnav/_fpnav7";
+@import "components/fpnav/_fpnav8";
 
 /** Blocks */
 @import "blocks/hamburger";
@@ -49,6 +52,7 @@
 @import "layouts/hero";
 @import "layouts/menu";
 @import "layouts/textimg";
+@import "layouts/news";
 @import "layouts/footer";
 @import "layouts/popup-flat";
 @import "layouts/_modal.scss";

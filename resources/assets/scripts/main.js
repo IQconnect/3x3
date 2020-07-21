@@ -17,6 +17,7 @@ import './autoload/**/*';
 import imagemap from './components/image-map';
 import fullpage from './components/fullpage';
 import hamburger from './components/hamburger';
+import newsslider from './components/news-slider';
 
 /** Populate Router instance with DOM routes */
 // const routes = new Router({
@@ -36,4 +37,9 @@ jQuery(document).ready(() => {
   imagemap.init();
   fullpage.init();
   hamburger.init();
+
+  if($('.news-carousel').length) {
+    newsslider.init();
+  }
+
 });

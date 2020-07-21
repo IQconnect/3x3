@@ -1,0 +1,11 @@
+.section {
+  height: 100vh !important;
+
+  &__white {
+    background: $light;
+  }
+
+  &__black {
+    background: $black;
+  }
+}

@@ -1,0 +1,8 @@
+#fp-nav ul li:hover .fp-tooltip {
+  opacity: 0 !important;
+}
+
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+  -webkit-transition: opacity 0.7s ease-out !important;
+  transition: opacity 0.7s ease-out !important;
+}

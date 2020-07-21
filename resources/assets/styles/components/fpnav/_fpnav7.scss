@@ -1,0 +1,21 @@
+.fp-viewing-7 {
+  transition: all 1.1s ease-out !important;
+
+  .header {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #fp-nav ul li a span,
+  .fp-slidesNav {
+    background: $black !important;
+    border: $light solid 1px;
+  }
+
+  .fp-tooltip {
+    @extend %special;
+
+    font-size: 50px !important;
+    color: $black !important;
+  }
+}

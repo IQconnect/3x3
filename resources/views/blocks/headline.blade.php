@@ -2,7 +2,7 @@
  $title = $data['headline'];
 @endphp
 
-<div class="headline">
+<div class="headline @if">
 	<h1 class="headline__title">
 	{!! $title !!}
 	</h1>

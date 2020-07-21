@@ -6048,7 +6048,7 @@ first-chunk-stream@^1.0.0:
   resolved "https://registry.yarnpkg.com/first-chunk-stream/-/first-chunk-stream-1.0.0.tgz#59bfb50cd905f60d7c394cd3d9acaab4e6ad934e"
   integrity sha1-Wb+1DNkF9g18OUzT2ayqtOatk04=
 
-fizzy-ui-utils@^2.0.0, fizzy-ui-utils@^2.0.7:
+fizzy-ui-utils@^2.0.0, fizzy-ui-utils@^2.0.2, fizzy-ui-utils@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/fizzy-ui-utils/-/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
   integrity sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg==
@@ -6076,6 +6076,14 @@ flickity-as-nav-for@^2.0.1:
   integrity sha1-ZO3MOyfM38vIm6ucCGvWysRlGxs=
   dependencies:
     fizzy-ui-utils "^2.0.0"
+    flickity "^2.0.0"
+
+flickity-bg-lazyload@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/flickity-bg-lazyload/-/flickity-bg-lazyload-1.0.1.tgz#54ade7d5578a14230fbd33b135034ad030e90d2e"
+  integrity sha512-OvuDBSI0UTjSMU8Dk+y70sJB63UnTzEssubX6oTHeQtkzk2EVsXxfgemiWuNt8wpYKR3wpavorz4wH8Cskb7vA==
+  dependencies:
+    fizzy-ui-utils "^2.0.2"
     flickity "^2.0.0"
 
 flickity@^2.0.0:
