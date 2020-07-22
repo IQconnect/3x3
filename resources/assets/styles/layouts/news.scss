@@ -9,6 +9,9 @@
 
   &__carousel {
     width: 100%;
+    padding: 10px;
+    background: $light;
+    border-radius: 15px;
   }
 
   &__cell {

@@ -1,0 +1,25 @@
+.more {
+  display: flex;
+  justify-content: flex-end;
+
+  &--black {
+    color: $black;
+  }
+
+  &--white {
+    color: $light;
+  }
+
+  &__text {
+    @extend .major-text;
+    @extend %special;
+
+    font-weight: 600;
+    margin: gutter(3) 0;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

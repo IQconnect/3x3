@@ -7,21 +7,21 @@ $color = $data['scolor'];
 <section class="section @if($color=='white')section--white @else section--black @endif news fullscroll">
 	<div class="container">
 		@include('blocks.headline')
-		<div class="news__wrapper" >
+		<div class="calendar__wrapper" >
 
-			<div class="news__carousel news-carousel">
+			<div class="calendar__carousel calendar-carousel">
 				@foreach (blog() as $post)
 				@php
 				$title = $post->post_excerpt;
 				$link = get_post_permalink($post->ID);
 				$thumbnail = get_post_thumbnail_id($post->ID);
 				@endphp
-					<div class="news__cell">
-						<div class="news__cellcontent">
-							{!! image($thumbnail, 'full', 'news__image') !!}
-							<div class="news__content">
+					<div class="calendar__cell">
+						<div class="calendar__cellcontent">
+							{!! image($thumbnail, 'full', 'calendar__image') !!}
+							<div class="calendar__content">
 
-									<a class="news__text" href="{!! $link !!}">{!! $title !!}</a>
+									<a class="calendar__text" href="{!! $link !!}">{!! $title !!}</a>
 						</div>
 					</div>
 					</div>

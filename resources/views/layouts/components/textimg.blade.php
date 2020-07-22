@@ -4,10 +4,11 @@
     $text = $data['maintext'];
     $imgbg = $data['imgbg']['ID'];
     $imglogo = $data['imglogo']['ID'];
+    $color = $data['scolor'];
 
 @endphp
 
-<section class="section textimg fullscroll">
+<section class="section @if($color=='white')section--white @else section--black @endif textimg fullscroll">
     <div class="textimg__background">
         {!! image($imgbg, 'full', 'textimg__img') !!}
    </div>

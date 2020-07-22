@@ -8,14 +8,14 @@
 
   #fp-nav ul li a span,
   .fp-slidesNav {
-    background: $black !important;
-    border: $light solid 1px;
+    background: $light !important;
+    border: $black solid 1px;
   }
 
   .fp-tooltip {
     @extend %special;
 
     font-size: 50px !important;
-    color: $black !important;
+    color: $light !important;
   }
 }

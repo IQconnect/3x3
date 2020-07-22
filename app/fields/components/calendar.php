@@ -4,9 +4,9 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$news = new FieldsBuilder('news', ['label' => 'Aktualności']);
+$calendar = new FieldsBuilder('calendar', ['label' => 'Kalendarz']);
 
-$news
+$calendar
 
 ->addFields(get_field_partial('components.headline'))
 ->addFields(get_field_partial('components.color'))
@@ -14,4 +14,4 @@ $news
 
 
 
-return $news;
+return $calendar;
