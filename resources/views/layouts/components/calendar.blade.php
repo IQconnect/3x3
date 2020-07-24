@@ -8,9 +8,9 @@ $color = $data['scolor'];
 	<div class="container">
 		@include('blocks.headline')
 		<div class="calendar__wrapper" >
-
+			<div class="calendar__contain">
 			<div class="calendar__carousel calendar-carousel">
-				@foreach (blog() as $post)
+				@foreach (calendar() as $post)
 				@php
 				$title = $post->post_excerpt;
 				$link = get_post_permalink($post->ID);
@@ -18,7 +18,6 @@ $color = $data['scolor'];
 				@endphp
 					<div class="calendar__cell">
 						<div class="calendar__cellcontent">
-							{!! image($thumbnail, 'full', 'calendar__image') !!}
 							<div class="calendar__content">
 
 									<a class="calendar__text" href="{!! $link !!}">{!! $title !!}</a>
@@ -27,6 +26,8 @@ $color = $data['scolor'];
 					</div>
 				@endforeach
 		</div>
+	</div>
 		@include('blocks.more')
+
 	</div>
 </section>

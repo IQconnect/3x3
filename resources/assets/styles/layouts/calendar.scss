@@ -1,0 +1,95 @@
+.calendar {
+  $root: &;
+
+  &__wrapper {
+    width: 100%;
+    height: 80vh;
+    margin: 40px 0;
+  }
+
+  &__contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__carousel {
+    width: 92%;
+    background: $black;
+    border-radius: 15px;
+  }
+
+  &__cell {
+    width: 20%;
+    height: 450px;
+    margin-right: 10px;
+    background: none;
+    border: 7px solid rgba(119, 118, 118, 0.3);
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: $light;
+      border: 7px solid $light;
+
+      #{$root}__text {
+        color: $black;
+      }
+    }
+  }
+
+  &__cellcontent {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    color: $light;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__text {
+    @extend .text;
+    @extend %special;
+
+    font-weight: 600;
+    color: $light;
+    margin: gutter(2);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+}
+
+.flickity-prev-next-button.previous {
+  left: -50px;
+}
+
+.flickity-prev-next-button.next {
+  right: -50px;
+}
+
+.flickity-button {
+  background: none;
+  border: 5px solid rgba(119, 118, 118, 0.3);
+  color: rgba(119, 118, 118, 0.3);
+
+  &:hover {
+    background: $light;
+    color: $special;
+    border: 0;
+  }
+}

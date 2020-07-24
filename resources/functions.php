@@ -247,24 +247,7 @@ function option($key)
 }
 
 // Our custom post type function
-function createProjectPostType()
-{
 
-        register_post_type('acalendar',
-            array(
-                'menu_icon' => 'dashicons-admin-multisite',
-                'labels' => array(
-                    'name' => esc_attr__('Kalendarz'),
-                    'singular_name' => esc_attr__('Kalendarz'),
-                ),
-                'public' => true,
-                'has_archive' => false,
-                'rewrite' => array('slug' => 'asortyment'),
-                'show_in_rest' => true,
-                'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
-            )
-        );
-}
 
 
 function blog() {
@@ -273,17 +256,25 @@ function blog() {
         'orderby'   => 'date',
         'sort_order' => 'asc',
         'post_type'  => 'post',
-        'category'   => 0,
+        'category'   => 3,
+    ));
+
+    return $posts;
+}
+
+function calendar() {
+    $posts = get_posts(array(
+        'numberposts'      => 9,
+        'orderby'   => 'date',
+        'sort_order' => 'asc',
+        'post_type'  => 'post',
+        'category'   => 4,
     ));
 
     return $posts;
 }
 
 
-
-
-// Hooking up our function to theme setup
-add_action('init', 'createProjectPostType');
 
 function my_acf_init()
 {
