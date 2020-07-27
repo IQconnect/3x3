@@ -35,6 +35,10 @@
       #{$root}__text {
         color: $black;
       }
+
+      #{$root}__datename {
+        color: $black;
+      }
     }
   }
 
@@ -47,11 +51,20 @@
     position: relative;
     color: $light;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     height: 100%;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+  }
+
+  &__datename {
+    @extend .text;
+    @extend %special;
+
+    font-weight: 600;
+    color: $light;
   }
 
   &__text {

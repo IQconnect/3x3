@@ -10,7 +10,10 @@ $post
     ->setLocation('post_type', '==', 'post');
 
 $post
-    ->addFields(get_field_partial('components.date'))
-    ->addFields(get_field_partial('components.content'))
-    ->addFields(get_field_partial('partials.builder'));
+    ->addTab('datawpisu', ['placement' => 'left'])
+        ->addText('dayname', ['label'=>'Nazwa dnia'])
+        ->addText('day', ['label'=>'Dzień'])
+        ->addText('month', ['label'=>'Miesiąc'])
+        ->addText('year', ['label'=>'Rok'])
+         ->addFields(get_field_partial('partials.builder'));
 return $post;
