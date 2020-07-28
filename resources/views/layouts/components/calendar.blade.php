@@ -29,8 +29,8 @@ $color = $data['scolor'];
 									<div class="calendar__datename">
 										{!! $dayname !!}
 									</div>
-									<div class="calendar__date--text">
-									{!! $day !!} . {!! $month !!}
+									<div class="calendar__datenumber">
+									{!! $day !!}.{!! $month !!}
 									</div>
 								</div>
 									<a class="calendar__text" href="{!! $link !!}">{!! $title !!}</a>

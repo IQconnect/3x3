@@ -15,5 +15,6 @@ $builder
             ->addLayout(get_field_partial('components.news'))
             ->addLayout(get_field_partial('components.calendar'))
             ->addLayout(get_field_partial('components.gallery'))
+            ->addLayout(get_field_partial('components.media'))
                 ->addLayout('content', ['label' => 'Treść']);
 return $builder;
