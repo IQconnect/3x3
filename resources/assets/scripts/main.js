@@ -19,6 +19,7 @@ import fullpage from './components/fullpage';
 import hamburger from './components/hamburger';
 import newsslider from './components/news-slider';
 import calendar from './components/calendar-slider';
+import sponsorslider from './components/sponsor-slider';
 
 /** Populate Router instance with DOM routes */
 // const routes = new Router({
@@ -39,6 +40,10 @@ jQuery(document).ready(() => {
   fullpage.init();
   hamburger.init();
   calendar.init();
+
+  if($('.sponsor-carousel').length) {
+    sponsorslider.init();
+  }
 
   if($('.news-carousel').length) {
     newsslider.init();

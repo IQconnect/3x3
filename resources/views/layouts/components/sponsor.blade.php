@@ -2,6 +2,7 @@
 @php
 $sectiontitle = $data['headline'];
 $color = $data['scolor'];
+$sponsors= $data['sinfo']
 @endphp
 
 <section class="section @if($color=='white')section--white @else section--black @endif sponsor fullscroll">
@@ -10,23 +11,22 @@ $color = $data['scolor'];
 		<div class="sponsor__wrapper" >
 
 			<div class="sponsor__carousel sponsor-carousel">
-				@foreach (blog() as $post)
+				@foreach ($sponsors as $element)
 				@php
-				$title = $post->post_excerpt;
-				$link = get_post_permalink($post->ID);
-				$thumbnail = get_post_thumbnail_id($post->ID);
+				$img = $element['sponsorimg'];
+				$stext = $element['sponsortext'];
 				@endphp
-					<div class="sponsor__cell">
-						<div class="sponsor__cellcontent">
-							{!! image($thumbnail, 'full', 'sponsor__image') !!}
-							<div class="sponsor__content">
+						<div class="sponsor__cell">
+							<div class="sponsor__cellcontent">
+								{!! image($img['id'], 'full', 'sponsor__img') !!}
 
-									<a class="sponsor__text" href="{!! $link !!}">{!! $title !!}</a>
+								<div class="sponsor__text">
+									{{ $stext }}
+								</div>
+								<a href="{!! $link !!}"> {!! $buttontext !!} </a>
+							</div>
 						</div>
-					</div>
-					</div>
 				@endforeach
 		</div>
-		@include('blocks.more')
 	</div>
 </section>
