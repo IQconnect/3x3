@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
@@ -11,8 +13,7 @@ $gray: #a7a7a7;
 
 // END COLORS
 
-$breakpoints: (
-  "xs": 576px,
+$breakpoints: ("xs": 576px,
   "sm": 768px,
   "md": 992px,
   "lg": 1280px,
@@ -21,15 +22,13 @@ $breakpoints: (
 
 $transition: 0.4s;
 
-$font-family: (
-  main: "Open+Sans",
+$font-family: (main: "Open Sans",
   special: "Sarpanch",
 );
 
 $gutter: 10px;
 $gutter_num: 10;
 
-$z-index: (
-  header: 100,
+$z-index: (header: 100,
   preloader: 300,
 );

@@ -15,13 +15,17 @@ $sponsors= $data['sinfo']
 				@php
 				$img = $element['sponsorimg'];
 				$stext = $element['sponsortext'];
+				$stitle = $element['sponsortitle'];
+				$slink = $element['sponsorlink'];
 				@endphp
 						<div class="sponsor__cell">
 							<div class="sponsor__cellcontent">
-								{!! image($img['id'], 'full', 'sponsor__img') !!}
-
+							<a class="sponsor__imgwrapper" href="{!! $link !!}">{!! image($img['id'], 'full', 'sponsor__img') !!}</a>
+								<div class="sponsor__title">
+									{!! $stitle !!}
+								</div>
 								<div class="sponsor__text">
-									{{ $stext }}
+									{!! $stext !!}
 								</div>
 								<a href="{!! $link !!}"> {!! $buttontext !!} </a>
 							</div>
