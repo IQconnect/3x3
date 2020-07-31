@@ -1,6 +1,8 @@
 .more {
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
+  margin: 40px 0;
 
   &--black {
     color: $black;

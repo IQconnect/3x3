@@ -2,7 +2,7 @@
 @php
 $sectiontitle = $data['headline'];
 $color = $data['scolor'];
-$sponsors= $data['sinfo']
+$sponsors= $data['sinfo'];
 @endphp
 
 <section class="section @if($color=='white')section--white @else section--black @endif sponsor fullscroll">
@@ -16,18 +16,25 @@ $sponsors= $data['sinfo']
 				$img = $element['sponsorimg'];
 				$stext = $element['sponsortext'];
 				$stitle = $element['sponsortitle'];
-				$slink = $element['sponsorlink'];
+				$slink = $element['sponsorlink']['url'];
+				$buttontext = $element['sponsorbutton']
 				@endphp
 						<div class="sponsor__cell">
 							<div class="sponsor__cellcontent">
-							<a class="sponsor__imgwrapper" href="{!! $link !!}">{!! image($img['id'], 'full', 'sponsor__img') !!}</a>
+							<div class="sponsor__imgwrapper">
+								{!! image($img['id'], 'full', 'sponsor__img') !!}
+							</div>
 								<div class="sponsor__title">
 									{!! $stitle !!}
 								</div>
+								@if( $stext )
 								<div class="sponsor__text">
 									{!! $stext !!}
 								</div>
-								<a href="{!! $link !!}"> {!! $buttontext !!} </a>
+								@endif
+								@if( $buttontext )
+								<a class="sponsor__button" href="{!! $slink !!}"> {!! $buttontext !!} </a>
+								@endif
 							</div>
 						</div>
 				@endforeach

@@ -23,12 +23,13 @@
 
   &__follow {
     @extend %special;
-    @extend .subtitle;
+    @extend .follow;
 
     margin: gutter(3) 0 0 0;
     letter-spacing: gutter(0.5);
     font-weight: 600;
     color: $light;
+    text-align: center;
   }
 
   &__social {
@@ -66,7 +67,7 @@
 
   &__brand {
     margin: gutter(1) 0;
-    width: 200px;
+    width: gutter(40);
   }
 
   &__image {
