@@ -9,8 +9,8 @@
   @include cssLock("padding-right", 360, 1920, (gutter_num(3), gutter_num(2.45)));
 
   @include media("<md") {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   &--fluid {

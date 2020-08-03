@@ -21,6 +21,11 @@
     background: $black;
     border-radius: 15px;
 
+    @include media("<=sm") {
+      width: 100%;
+      height: 500px;
+    }
+
     &:hover {
       #{$root}__image {
         filter: brightness(40%);

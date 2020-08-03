@@ -19,9 +19,14 @@
 
   &__button {
     width: 100%;
-    height: 340px;
+    height: gutter(34);
     position: relative;
     margin: 30px 0;
+
+    @include media("<=sm") {
+      height: gutter(30);
+      margin: 10px 0;
+    }
 
     &:hover {
       #{$root}__img {
@@ -67,7 +72,7 @@
     filter: blur(0) brightness(40%);
 
     @include media("<=sm") {
-      max-height: gutter(20);
+      max-height: gutter(30);
     }
   }
 }

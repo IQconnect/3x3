@@ -1,13 +1,15 @@
 @php
-    $content = option("contact-header");
     $shortcode = $data['shortcode'];
     $tooltips = $data['tooltips'];
-    $title = option("upper");
-    $eventurl = option("eventurl");
-    $eventtext = option("eventtext");
+    $logo = option('heroimage');
 @endphp
 
 
 <section class="hero fullscroll">
+    <div class="hero__selection">
     {!! do_shortcode( "[".$shortcode."]" ); !!}
+    </div>
+    <div class="hero__logo">
+        {!! image($logo['id'], 'full', 'hero__image') !!}
+    </div>
 </section>

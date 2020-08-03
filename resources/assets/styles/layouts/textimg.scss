@@ -4,6 +4,10 @@
     top: 20%;
     left: 10%;
     width: 35%;
+
+    @include media("<=sm") {
+      display: none;
+    }
   }
 
   &__content-wrapper {
@@ -12,12 +16,9 @@
     flex-direction: row;
     justify-content: flex-end;
 
-    @include media("<=md") {
-      height: 80vh;
-    }
-
     @include media("<=sm") {
       height: auto;
+      flex-direction: column;
     }
   }
 
@@ -28,6 +29,11 @@
     width: 50%;
     justify-content: flex-end;
     align-items: center;
+
+    @include media("<=sm") {
+      width: 100%;
+      margin-top: gutter(4);
+    }
   }
 
   &__text {
@@ -47,6 +53,11 @@
   &__logo {
     height: gutter(35);
     width: gutter(60);
+
+    @include media("<=sm") {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__img {

@@ -14,6 +14,7 @@ $option_page
         ->addText('facebook' , ['label' =>'Adress Facebooka'])
         ->addText('instagram' , ['label' =>'Adress Instagrama'])
         ->addImage('logo', ['wrapper'=>['width'=>'33%'],'label' => 'Logo w menu'])
+        ->addImage('heroimage', ['wrapper'=>['width'=>'33%'],'label' => 'Logo w wersji mobilnej'])
     ->addTab('Stopka', ['placement' => 'left'])
         ->addText('titlefooter' , ['label' =>'Tytuł dla stopki'])
         ->addSelect('scolor', ['label'=>'Kolor sekcji'])

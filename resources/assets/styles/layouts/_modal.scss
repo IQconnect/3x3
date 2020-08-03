@@ -66,11 +66,12 @@
   }
 
   &__headline {
-    @extend .follow;
+    @extend .subtitle;
     @extend %special;
 
     font-weight: 600;
-    margin: gutter(2) 0;
+    margin-bottom: gutter(2);
+    line-height: 1;
   }
 
   &__name {
@@ -115,12 +116,16 @@
   }
 
   &__caption {
-    @extend .follow;
+    @extend .subtitle;
     @extend %special;
+
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: gutter(1);
   }
 
   &__table {
-    @extend .text;
+    @extend .follow;
     @extend %special;
 
     text-align: left;
