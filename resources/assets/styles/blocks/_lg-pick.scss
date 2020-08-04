@@ -10,6 +10,7 @@
   color: $light;
   overflow: hidden;
   transition: $transition;
+  z-index: 40;
 
   &__wrapper,
   a {

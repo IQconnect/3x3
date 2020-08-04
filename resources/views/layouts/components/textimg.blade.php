@@ -10,7 +10,7 @@
 
 <section class="section @if($color=='white')section--white @else section--black @endif textimg fullscroll">
     <div class="textimg__background">
-        {!! image($imgbg, 'full', 'textimg__img') !!}
+        {!! image($imgbg, 'full', 'textimg__bimg') !!}
    </div>
     <div class="container">
         @include('blocks.headline')

@@ -8,9 +8,14 @@
   @include cssLock("padding-left", 360, 1920, (gutter_num(3), gutter_num(2.45)));
   @include cssLock("padding-right", 360, 1920, (gutter_num(3), gutter_num(2.45)));
 
-  @include media("<md") {
-    padding-left: 50px;
-    padding-right: 50px;
+  @include media("<xl") {
+    padding-left: gutter(5);
+    padding-right: gutter(10);
+  }
+
+  @include media("<=md") {
+    padding-left: gutter(5);
+    padding-right: gutter(5);
   }
 
   &--fluid {

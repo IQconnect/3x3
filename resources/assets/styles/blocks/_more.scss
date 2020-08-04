@@ -2,7 +2,9 @@
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  margin: 40px 0;
+
+  @include cssLock("margin-top", 360, 1920, (gutter_num(0), gutter_num(4)));
+  @include cssLock("margin-bottom", 360, 1920, (gutter_num(0), gutter_num(4)));
 
   &--black {
     color: $black;

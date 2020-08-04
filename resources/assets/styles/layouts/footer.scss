@@ -1,7 +1,6 @@
 .footer {
   $root: &;
 
-  height: 100vh !important;
   position: relative;
   margin-bottom: gutter(2);
 
@@ -15,7 +14,6 @@
 
   &__wrapper {
     margin: gutter(4) 0;
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -76,5 +74,11 @@
 
   &__image {
     @extend %image;
+  }
+
+  .fp-tableCell {
+    @media (min-height: 1320px) {
+      vertical-align: unset !important;
+    }
   }
 }
