@@ -36,10 +36,17 @@ jQuery(document).ready(() => {
   console.log('READY');
   //hero.init();
   //header.init();
-  imagemap.init();
   fullpage.init();
   hamburger.init();
-  calendar.init();
+
+
+  if($('.hero__selection').length) {
+    imagemap.init();
+  }
+
+  if($('.calendar-carousel').length) {
+    calendar.init();
+  }
 
   if($('.sponsor-carousel').length) {
     sponsorslider.init();

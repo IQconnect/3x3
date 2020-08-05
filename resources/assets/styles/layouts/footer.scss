@@ -82,3 +82,9 @@
     }
   }
 }
+
+.fa-facebook-f {
+  &::before {
+    content: "\f39e" !important;
+  }
+}

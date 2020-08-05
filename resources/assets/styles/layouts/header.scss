@@ -10,6 +10,10 @@
   padding: gutter(0.5);
   overflow: hidden;
 
+  &--noabsolute {
+    position: relative;
+  }
+
   &--hide {
     background: $black;
   }
@@ -17,6 +21,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__brand {
@@ -213,6 +218,7 @@
     list-style: none;
     padding: gutter(10) 0 0;
     margin: 0;
+    align-items: center;
 
     @include media(">=lg") {
       padding: 0;

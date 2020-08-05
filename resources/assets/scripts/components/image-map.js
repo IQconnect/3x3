@@ -26,7 +26,6 @@ const imageMap = {
             if (this.elem.length) {
                 clearInterval(interval);
                 this.addEvent();
-                console.log('STOP');
             }
         }, 100)
     },
@@ -54,10 +53,6 @@ const imageMap = {
                     next.classList.add(this.darkclass);
                     next = next.nextElementSibling;
                 }
-
-
-
-                console.log(next);
             });
 
             element.addEventListener('mouseout', (e) => {

@@ -8,7 +8,7 @@
 		<!-- End Google Tag Manager (noscript) -->
     <div class="preloader" preloader ></div>
     @php do_action('get_header') @endphp
-    @include('partials.header')
+    @include('partials.postheader')
 
     <div  class="wrap" role="document">
       <div class="content">

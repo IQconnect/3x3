@@ -30,7 +30,7 @@
       <div class="lg-pick footer__social">
         @if ($fb)
         <a class="lg-pick__wrapper footer__icon" href="{!! $fb !!}">
-            <i class="fa fa-facebook"></i>
+            <i class="fab fa-facebook-f"></i>
         </a>
         @endif
         @if ($inst)

@@ -17,5 +17,5 @@ $builder
             ->addLayout(get_field_partial('components.gallery'))
             ->addLayout(get_field_partial('components.media'))
             ->addLayout(get_field_partial('components.sponsor'))
-                ->addLayout('content', ['label' => 'Treść']);
+            ->addLayout('content', ['label' => 'Treść']);
 return $builder;
