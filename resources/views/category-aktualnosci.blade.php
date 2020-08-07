@@ -1,24 +1,25 @@
-@extends('layouts.post')
+@extends('layouts.posted')
 
 @section('news')
 
 @php
-    $posts = get_posts(array(
-        'orderby'   => 'date',
-        'sort_order' => 'asc',
-        'post_type'  => 'post',
-        'category'   => 3,
-    ));
+
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array('post_type' => 'post', 'posts_per_page'=>6, 'cat'=>3, 'paged'=>$paged);
+    $work = new WP_Query($args);
+
 
 @endphp
 
-<section class="section  aktualnosci section--black">
+<section class="section section--post aktualnosci section--black">
 	<div class="container">
 		<h1 class="headline__title @if($color=='white')headline--black @else headline--white @endif">
 			Aktualności
 			</h1>
 		<div class="aktualnosci__wrapper" >
-			@foreach ($posts as $post)
+			@if($work)
+			@foreach($work->posts as $post)
+
 				@php
 				$id = $post-> ID;
 				$desc = $post->post_excerpt;
@@ -51,7 +52,16 @@
 						</div>
 					</div>
 				</a>
-			@endforeach
+				@endforeach
+			@endif
+		</div>
+		<div class="aktualnosci__pagination">
+		@php
+    $args = array(
+        'query' => $work,
+    );
+    boot_pagination( $args );
+@endphp
 		</div>
 	</div>
 </section>

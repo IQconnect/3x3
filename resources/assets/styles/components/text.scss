@@ -98,7 +98,7 @@ blockquote,
     font-size: gutter(38);
     top: gutter(14);
     left: gutter(-12);
-    color: rgba($gray, 0.2);
+    color: rgba($grey, 0.2);
     z-index: -1;
     font-family: map-get($font-family, "quote"), sans-serif;
   }

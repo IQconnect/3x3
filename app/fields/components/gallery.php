@@ -12,6 +12,7 @@ $config = (object) [
 $gallery = new FieldsBuilder('gallery', ['label' => 'Galeria']);
 
 $gallery
-    ->addGallery('gallery',['label' => 'Galeria','max' => '8',]);
+    ->addFields(get_field_partial('components.headline'))
+    ->addGallery('gallery',['label' => 'Galeria']);
 
 return $gallery;

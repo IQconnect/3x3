@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.posted')
 
 @section('content')
   @if (!have_posts())

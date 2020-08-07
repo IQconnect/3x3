@@ -5,8 +5,22 @@
   max-width: gutter(143);
   margin: 0 auto;
 
-  @include cssLock("padding-left", 360, 1920, (gutter_num(3), gutter_num(2.45)));
-  @include cssLock("padding-right", 360, 1920, (gutter_num(3), gutter_num(2.45)));
+  &--slim {
+    max-width: 1000px;
+  }
+
+  @include cssLock(
+    "padding-left",
+    360,
+    1920,
+    (gutter_num(3), gutter_num(2.45))
+  );
+  @include cssLock(
+    "padding-right",
+    360,
+    1920,
+    (gutter_num(3), gutter_num(2.45))
+  );
 
   @include media("<xl") {
     padding-left: gutter(5);

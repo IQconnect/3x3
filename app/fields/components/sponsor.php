@@ -7,6 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $sponsor= new FieldsBuilder('sponsor',['label' => 'Sponsorzy']);
 
 $sponsor
+
 ->addFields(get_field_partial('components.color'))
 ->addFields(get_field_partial('components.headline'))
 	->addRepeater('sinfo')

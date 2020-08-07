@@ -11,6 +11,7 @@ const Fullpage = {
       navigation: true,
       navigationPosition: 'right',
       navigationTooltips: ['1', '2', '3', '4', '5', '6', '7'],
+      anchors: ['Start','Oprojekcie', 'Aktualnosci', 'Kalendarz', 'Media', 'Sponsorzy', 'Kontakt'],
       showActiveTooltip: true,
       sectionSelector: '.fullscroll',
       autoScrolling: true,

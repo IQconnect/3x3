@@ -33,6 +33,7 @@
 /** Components */
 @import "components/container";
 @import "components/section";
+@import "components/pagination";
 @import "components/text";
 @import "components/button";
 @import "components/fpnav/_fpnavmain";
@@ -56,6 +57,8 @@
 @import "layouts/header";
 @import "layouts/hero";
 @import "layouts/menu";
+@import "layouts/page-content";
+@import "layouts/posts";
 @import "layouts/textimg";
 @import "layouts/aktualnosci";
 @import "layouts/news";

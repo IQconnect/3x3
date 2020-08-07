@@ -5,7 +5,7 @@ $background = $data['background']['url'];
 $color = $data['scolor'];
 @endphp
 
-<section class="section @if($color=='white')section--white @else section--black @endif news fullscroll">
+<section  class="section @if($color=='white')section--white @else section--black @endif news fullscroll">
 	<div class="container">
 
 		<div class="calendar__wrapper" >

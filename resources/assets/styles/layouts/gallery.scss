@@ -1,16 +1,21 @@
 .gallery {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: gutter(1);
-  margin: 0;
-  padding: 0;
+  background-color: $special;
+  padding: gutter(5) 0;
 
-  @include media("<=md") {
-    grid-template-columns: 1fr 1fr;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: gutter(1);
+    margin-top: gutter(4);
+    padding: 0;
+
+    @include media("<=md") {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__imagewrapper {
-    height: gutter(15);
+    height: gutter(25);
   }
 
   &__image {

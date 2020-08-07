@@ -174,7 +174,6 @@
         padding: $gutter 0;
         white-space: nowrap;
         opacity: 0;
-        color: inherit;
 
         @include media(">lg") {
           padding: gutter(1) gutter(2);
@@ -185,10 +184,14 @@
       &.current-menu-item,
       &.current-menu-ancestor {
         position: relative;
-        color: $special;
+        color: $light;
+
+        &:hover {
+          color: $special;
+        }
 
         @include media(">=lg") {
-          color: $special;
+          color: $light;
         }
 
         .current_page_item {

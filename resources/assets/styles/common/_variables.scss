@@ -7,13 +7,15 @@
 $light: #fff;
 $dark: #464646;
 $black: #000;
-$special: #e4cc82;
+$special: #d2ab31;
 $special-dark: #32315c;
-$gray: #a7a7a7;
+$grey: #a7a7a7;
+$grey-dark: #464646;
 
 // END COLORS
 
-$breakpoints: ("xs": 576px,
+$breakpoints: (
+  "xs": 576px,
   "sm": 768px,
   "md": 992px,
   "lg": 1280px,
@@ -22,13 +24,15 @@ $breakpoints: ("xs": 576px,
 
 $transition: 0.4s;
 
-$font-family: (main: "Open Sans",
+$font-family: (
+  main: "Open Sans",
   special: "Sarpanch",
 );
 
 $gutter: 10px;
 $gutter_num: 10;
 
-$z-index: (header: 100,
+$z-index: (
+  header: 100,
   preloader: 300,
 );

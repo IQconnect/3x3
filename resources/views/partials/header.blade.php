@@ -1,7 +1,7 @@
 <header class="header" data-header>
   <div class="container">
     <div class="header__wrapper">
-      <a class="header__brand-wrapper" href="{{ home_url('/') }}">
+      <a class="header__brand-wrapper" href="{{ home_url('/#Start') }}">
         <img class="header__brand" src="{{  get_field('logo', 'options')['url'] }}" alt="3X3">
       </a>
       <button class="header__hamburger hamburger" data-toggle-menu>

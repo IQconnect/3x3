@@ -2,9 +2,10 @@
 $gallery = $data['gallery'];
 @endphp
 
-<section class="section">
-  <div class="container">
-    <div class="gallery">
+<section class="gallery section section--post">
+  <div class="container container--slim">
+    @include('blocks.headline')
+    <div class="gallery__wrapper">
       @php
         $galleryName = rand(1, 999);
       @endphp
