@@ -19,6 +19,7 @@ import fullpage from './components/fullpage';
 import hamburger from './components/hamburger';
 import newsslider from './components/news-slider';
 import calendar from './components/calendar-slider';
+import maingallery from './components/maingallery';
 import sponsorslider from './components/sponsor-slider';
 
 /** Populate Router instance with DOM routes */
@@ -50,6 +51,10 @@ jQuery(document).ready(() => {
 
   if($('.sponsor-carousel').length) {
     sponsorslider.init();
+  }
+
+  if($('.maingallery').length) {
+   maingallery.init();
   }
 
   if($('.news-carousel').length) {

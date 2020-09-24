@@ -19,12 +19,12 @@
 
   &__button {
     width: 100%;
-    height: gutter(34);
     position: relative;
     margin: 30px 0;
 
+    @include cssLock("height", 360, 1920, (gutter_num(20), gutter_num(30)));
+
     @include media("<=sm") {
-      height: gutter(30);
       margin: 10px 0;
     }
 

@@ -19,7 +19,7 @@
     <div class="container">
         @include('blocks.headline')
         <div class="media__content-wrapper" >
-                <a class="media__button" href={!! $linkone !!}>
+                <a class="media__button" href={!! $linkone['url'] !!}>
                     <div class="media__button-wrapper">
 
                         {!! image($imgbuttonone, 'full', 'media__img') !!}
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="media__button" href={!! $linktwo !!}>
+                <a class="media__button" href={!! $linktwo['url'] !!}>
                     <div class="media__button-wrapper">
                         {!! image($imgbuttontwo, 'full', 'media__img') !!}
                         <div class="media__text">

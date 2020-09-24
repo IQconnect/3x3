@@ -47,7 +47,7 @@
 .text {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1.2), gutter_num(2)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(2)));
 
   line-height: 1.5;
 }

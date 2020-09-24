@@ -6,6 +6,11 @@
 @import "~aos/src/sass/aos.scss";
 @import "../../../node_modules/fullpage.js/dist/fullpage.css";
 
+//*FONT *//
+
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
 /** Common */
 
 @import "common/variables";
@@ -36,6 +41,7 @@
 @import "components/pagination";
 @import "components/text";
 @import "components/button";
+@import "components/text-info";
 @import "components/fpnav/_fpnavmain";
 @import "components/fpnav/_fpnav0";
 @import "components/fpnav/_fpnav7";
@@ -62,6 +68,7 @@
 @import "layouts/textimg";
 @import "layouts/aktualnosci";
 @import "layouts/news";
+@import "layouts/maingallery";
 @import "layouts/gallery";
 @import "layouts/calendar";
 @import "layouts/media";

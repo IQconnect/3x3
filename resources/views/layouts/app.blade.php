@@ -9,10 +9,9 @@
     <div class="preloader" preloader ></div>
     @php do_action('get_header') @endphp
     @include('partials.header')
-
     <div  class="wrap" role="document">
       <div class="content">
-        <main id="full" class="main">
+        <main @if(APP::title() =="Strona Główna") id="full" @endif class="main">
 
           @yield('content')
           @php do_action('get_footer') @endphp

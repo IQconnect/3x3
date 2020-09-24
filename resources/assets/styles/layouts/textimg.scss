@@ -1,12 +1,11 @@
 .textimg {
   &__background {
     position: absolute;
-    top: 20%;
     left: 10%;
-    width: 35%;
 
+    @include cssLock("width", 360, 1920, (gutter_num(15), gutter_num(55)));
     @include cssLock("height", 360, 1920, (gutter_num(35), gutter_num(76)));
-    @include cssLock("top", 360, 1920, (gutter_num(35), gutter_num(20)));
+    @include cssLock("top", 360, 1920, (gutter_num(20), gutter_num(20)));
 
     @include media("<=sm") {
       display: none;
@@ -55,7 +54,7 @@
   }
 
   &__logo {
-    @include cssLock("width", 360, 1920, (gutter_num(20), gutter_num(50)));
+    @include cssLock("width", 360, 1920, (gutter_num(15), gutter_num(40)));
     @include cssLock("height", 360, 1920, (gutter_num(10), gutter_num(30)));
   }
 

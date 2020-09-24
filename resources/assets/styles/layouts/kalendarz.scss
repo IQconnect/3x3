@@ -1,4 +1,4 @@
-.aktualnosci {
+.kalendarz {
   margin-top: gutter(5);
 
   &__wrapper {
@@ -18,9 +18,9 @@
 
   &__postcontent {
     width: 100%;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    height: 100%;
+    height: gutter(20);
+    display: flex;
+    flex-direction: row;
     margin: auto;
     border: 1px solid $light;
 
@@ -42,7 +42,7 @@
   }
 
   &__postimage {
-    width: gutter(20);
+    width: gutter(50);
     height: 100%;
   }
 

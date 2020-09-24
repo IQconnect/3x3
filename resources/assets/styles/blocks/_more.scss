@@ -3,7 +3,7 @@
   justify-content: flex-end;
   align-self: flex-end;
 
-  @include cssLock("margin-top", 360, 1920, (gutter_num(0), gutter_num(4)));
+  @include cssLock("margin-top", 360, 1920, (gutter_num(0), gutter_num(1)));
   @include cssLock("margin-bottom", 360, 1920, (gutter_num(0), gutter_num(4)));
 
   &--black {

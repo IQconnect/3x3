@@ -5,7 +5,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: gutter(1);
+    grid-gap: gutter(0.5);
     margin-top: gutter(4);
     padding: 0;
 
@@ -15,7 +15,7 @@
   }
 
   &__imagewrapper {
-    height: gutter(25);
+    height: gutter(20);
   }
 
   &__image {

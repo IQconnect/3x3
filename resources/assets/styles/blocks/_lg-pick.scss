@@ -12,6 +12,10 @@
   transition: $transition;
   z-index: 40;
 
+  @include media("<lg") {
+    color: $special;
+  }
+
   &__wrapper,
   a {
     display: flex;
@@ -27,6 +31,12 @@
 
     &:focus {
       outline: 0;
+    }
+  }
+
+  .fa-facebook-f {
+    &::before {
+      content: "\f39e" !important;
     }
   }
 }

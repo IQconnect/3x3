@@ -8,6 +8,11 @@
   background: $black;
 
   &__selection {
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+
     @include media("<md") {
       display: none;
     }
@@ -60,7 +65,7 @@
   }
 
   &__logo {
-    @include media(">md") {
+    @include media(">=md") {
       display: none;
     }
   }
@@ -99,9 +104,7 @@
 }
 
 .imp-wrap {
-  max-width: 1600px !important;
   margin: auto;
-
-  @include cssLock("height", 360, 1920, (gutter_num(100), gutter_num(200)));
-  // @include cssLock("left", 360, 1920, (gutter_num(-25), gutter_num(20)));
+  max-width: 1500px !important;
+  // @include cssLock("max-width", 360, 1920, (gutter_num(50), gutter_num(200)));
 }

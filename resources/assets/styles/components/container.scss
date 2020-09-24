@@ -9,6 +9,12 @@
     max-width: 1000px;
   }
 
+  &--mobilefix {
+    @include media("<md") {
+      padding: 0 !important;
+    }
+  }
+
   @include cssLock(
     "padding-left",
     360,
@@ -22,7 +28,7 @@
     (gutter_num(3), gutter_num(2.45))
   );
 
-  @include media("<xl") {
+  @include media("<=xl") {
     padding-left: gutter(5);
     padding-right: gutter(10);
   }

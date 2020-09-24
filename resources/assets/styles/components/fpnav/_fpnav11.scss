@@ -4,6 +4,11 @@
   .header {
     opacity: 0;
     visibility: hidden;
+
+    @include media("<=lg") {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   #fp-nav ul li a span,

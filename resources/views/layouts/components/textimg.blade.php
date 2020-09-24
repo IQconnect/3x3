@@ -8,7 +8,7 @@
 
 @endphp
 
-<section class="section @if($color=='white')section--white @else section--black @endif textimg fullscroll">
+<section class="section @if($color=='white')section--white @else section--black @endif textimg fp-auto-height-responsive fullscroll">
     <div class="textimg__background">
         {!! image($imgbg, 'full', 'textimg__bimg') !!}
    </div>

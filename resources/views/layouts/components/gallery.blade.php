@@ -11,8 +11,8 @@ $gallery = $data['gallery'];
       @endphp
       @foreach ($gallery as $img)
         <div class="gallery__imagewrapper">
-          <a data-fancybox="gallery{{$galleryName}}" href="{{ $img['url'] }}">
-            <img class="gallery__image" src="{{ $img['sizes']['medium'] }}">
+          <a data-fancybox="gallery{{$galleryName}}" data-caption="{{ $img['caption'] }}" href="{{ $img['url'] }}">
+            {!! image($img['ID'], 'full','gallery__image') !!}
           </a>
         </div>
       @endforeach

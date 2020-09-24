@@ -1,5 +1,5 @@
-<header class="header" data-header>
-  <div class="container">
+<header class="header @if (APP::title() !="Strona Główna") header--noabsolute  @endif "  data-header>
+  <div class="container containter--mobilefix">
     <div class="header__wrapper">
       <a class="header__brand-wrapper" href="{{ home_url('/#Start') }}">
         <img class="header__brand" src="{{  get_field('logo', 'options')['url'] }}" alt="3X3">

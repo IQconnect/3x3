@@ -3,6 +3,10 @@
   margin: 0;
   top: 0;
 
+  @include media("<=lg") {
+    margin: gutter(5) 0;
+  }
+
   &--black {
     color: $black;
   }

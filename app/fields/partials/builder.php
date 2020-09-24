@@ -13,6 +13,8 @@ $builder
             ->addLayout(get_field_partial('components.modal'))
             ->addLayout(get_field_partial('components.textimg'))
             ->addLayout(get_field_partial('components.news'))
+            ->addLayout(get_field_partial('components.video'))
+            ->addLayout(get_field_partial('components.maingallery'))
             ->addLayout(get_field_partial('components.calendar'))
             ->addLayout(get_field_partial('components.gallery'))
             ->addLayout(get_field_partial('components.media'))

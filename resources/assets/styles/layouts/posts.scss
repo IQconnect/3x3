@@ -17,15 +17,21 @@
     background-attachment: fixed;
   }
 
+  &__info {
+    display: block;
+  }
+
   &__date {
     @extend %special;
     @extend .text;
 
+    display: inline-block;
     font-weight: 400;
-    width: 30%;
     background-color: $special;
     color: $light;
     margin-bottom: gutter(5);
+
+    @include cssLock("padding", 360, 1920, (gutter_num(0.5), gutter_num(1)));
   }
 
   &__title {
@@ -34,5 +40,12 @@
 
     font-weight: 400;
     color: $black;
+
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(2), gutter_num(2))
+    );
   }
 }

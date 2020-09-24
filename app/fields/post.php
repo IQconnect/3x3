@@ -11,9 +11,6 @@ $post
 
 $post
     ->addTab('datawpisu', ['placement' => 'left'])
-        ->addText('dayname', ['label'=>'Nazwa dnia'])
-        ->addText('day', ['label'=>'Dzień'])
-        ->addText('month', ['label'=>'Miesiąc'])
-        ->addText('year', ['label'=>'Rok'])
-         ->addFields(get_field_partial('partials.builder'));
+        ->addDatePicker('date', ['label'=>'Data'])
+    ->addFields(get_field_partial('partials.builder'));
 return $post;

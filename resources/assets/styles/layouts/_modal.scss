@@ -15,6 +15,11 @@
   align-items: center;
   border: 1px solid;
 
+  @include media("<lg") {
+    padding: 20px 10px;
+    flex-direction: row;
+  }
+
   &__close {
     color: #fff;
     font-size: 35px;
@@ -26,7 +31,7 @@
     margin: 20px;
 
     &:hover {
-      color: red;
+      color: $special;
     }
   }
 
@@ -40,8 +45,8 @@
   }
 
   &__avatar {
-    height: gutter(45);
-    width: gutter(40);
+    @include cssLock("height", 360, 1920, (gutter_num(15), gutter_num(45)));
+    @include cssLock("width", 360, 1920, (gutter_num(10), gutter_num(40)));
   }
 
   &__img {
