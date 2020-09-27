@@ -19,8 +19,9 @@ $color = $data['scolor'];
 						$id = $post-> ID;
 						$title = $post->post_title;
 						$excerpt = $post->post_excerpt;
-						$date = get_field('date', $id);
-						$dayname = get_field('dayname', $id);
+						$date = get_the_date('Y-m-d',$id);
+
+						$dayname = get_the_date('F',$id);
 						$link = get_post_permalink($post->ID);
 						$thumbnail = get_post_thumbnail_id($post->ID);
 						@endphp

@@ -1,12 +1,6 @@
 .sponsor {
   $root: &;
 
-  .flickity-viewport {
-    @include media("<sm") {
-      height: calc(70vh) !important;
-    }
-  }
-
   &__wrapper {
     width: 100%;
     margin: 40px 0;
@@ -30,7 +24,7 @@
     display: flex;
     align-items: center;
 
-    @include cssLock("height", 360, 1920, (gutter_num(30), gutter_num(70)));
+    @include cssLock("height", 360, 1920, (gutter_num(60), gutter_num(70)));
 
     @include media("<=sm") {
       width: 100%;
@@ -49,6 +43,10 @@
     align-items: center;
     margin: 0 gutter(3.5);
     position: relative;
+
+    @include media("<=sm") {
+      margin: 0 gutter(1.5);
+    }
   }
 
   &__imgwrapper {
@@ -61,11 +59,16 @@
     border-radius: 15px;
     margin-top: gutter(5);
 
-    @include cssLock("height", 1366, 1920, (gutter_num(10), gutter_num(20)));
+    @include cssLock("height", 1366, 1920, (gutter_num(15), gutter_num(20)));
+
+    @include media("<=sm") {
+      margin-top: gutter(2);
+    }
   }
 
   &__button {
     @extend %special;
+    @extend .minor-text;
 
     padding: gutter(1) gutter(2);
     background: $light;
@@ -92,6 +95,10 @@
     margin-left: gutter(2);
     font-weight: 400;
     color: $light;
+
+    @include media("<=sm") {
+      margin: 0;
+    }
   }
 
   &__img {
