@@ -87,7 +87,7 @@
 
   &__text {
     @extend %special;
-    @extend .small-title;
+    @extend .minor-text;
 
     margin-left: gutter(2);
     font-weight: 400;
@@ -100,7 +100,7 @@
     object-fit: contain;
 
     @include media(">=sm") {
-      max-height: gutter(20);
+      max-height: gutter(10);
     }
   }
 }

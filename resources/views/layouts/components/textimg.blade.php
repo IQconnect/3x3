@@ -9,20 +9,17 @@
 @endphp
 
 <section class="section @if($color=='white')section--white @else section--black @endif textimg fp-auto-height-responsive fullscroll">
-    <div class="textimg__background">
-        {!! image($imgbg, 'full', 'textimg__bimg') !!}
-   </div>
     <div class="container">
         @include('blocks.headline')
         <div class="textimg__content-wrapper" >
-            <div class="textimg__content">
+                @if($imglogo)
                     <div class="textimg__logo">
                         {!! image($imglogo, 'full', 'textimg__img') !!}
                    </div>
+                @endif
                     <h3 class="textimg__text">
                         {!! $text !!}
                     </h3>
                 </div>
             </div>
-        </div>
 </section>

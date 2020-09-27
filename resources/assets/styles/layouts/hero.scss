@@ -8,10 +8,8 @@
   background: $black;
 
   &__selection {
-    bottom: 0;
     width: 100%;
     margin: auto;
-    position: absolute;
 
     @include media("<md") {
       display: none;
@@ -25,13 +23,7 @@
   }
 
   &__wrapper {
-    @extend %absolute;
-
-    position: absolute;
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   &__content {
@@ -105,6 +97,6 @@
 
 .imp-wrap {
   margin: auto;
-  max-width: 1500px !important;
+  max-width: 1300px !important;
   // @include cssLock("max-width", 360, 1920, (gutter_num(50), gutter_num(200)));
 }

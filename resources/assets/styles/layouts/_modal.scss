@@ -71,7 +71,7 @@
   }
 
   &__headline {
-    @extend .subtitle;
+    @extend .follow;
     @extend %special;
 
     font-weight: 600;
@@ -87,11 +87,11 @@
   }
 
   &__title {
-    @extend .text;
+    @extend .major-text;
     @extend %special;
 
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     display: block;
   }
 

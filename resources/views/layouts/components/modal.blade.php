@@ -29,11 +29,8 @@
 			</div>
 			<div class="modal__content">
 				<div class="modal__headline">
-					Informacje o graczu
-				</div>
-				<h2 class="modal__name">
 					{{ $name }}
-				</h2>
+				</div>
 				<div class="modal__title">
 					{{ $nick }} #{{ $number }}
 				</div>
