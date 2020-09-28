@@ -1,14 +1,6 @@
 .news {
   $root: &;
 
-  .flickity-viewport {
-    height: 100vw !important;
-
-    @include media(">sm") {
-      height: calc(100vw / 3) !important;
-    }
-  }
-
   &__wrapper {
     width: 100%;
     margin: 40px 0;
@@ -22,16 +14,21 @@
 
   &__cell {
     width: calc(100% / 3);
-    height: 100%;
     margin-right: 10px;
     background: $black;
     border-radius: 15px;
+    height: gutter(60);
 
-    @include media("<=lg") {
-      width: 50%;
+    @include media("<=xl") {
+      height: gutter(40);
     }
 
-    @include media("<sm") {
+    @include media("<=md") {
+      width: 50%;
+      height: gutter(40);
+    }
+
+    @include media("<=sm") {
       width: 100%;
     }
 
@@ -62,7 +59,7 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
-    @include media("<=lg") {
+    @include media("<=md") {
       opacity: 1;
     }
   }
@@ -93,7 +90,7 @@
     max-height: 100%;
     border-radius: 15px;
 
-    @include media("<=lg") {
+    @include media("<=md") {
       filter: brightness(40%);
     }
   }

@@ -44,7 +44,7 @@
 
   &__text {
     @extend %special;
-    @extend .small-title;
+    @extend .contact;
 
     letter-spacing: gutter(0.5);
     font-weight: 300;

@@ -254,7 +254,7 @@ function blog() {
     $posts = get_posts(array(
         'numberposts'      => 9,
         'orderby'   => 'date',
-        'sort_order' => 'asc',
+        'sort_order' => 'desc',
         'post_type'  => 'post',
         'category'   => 3,
     ));
@@ -266,7 +266,7 @@ function calendar() {
     $posts = get_posts(array(
         'numberposts'      => 6,
         'orderby'   => 'date',
-        'sort_order' => 'asc',
+        'sort_order' => 'desc',
         'post_type'  => 'post',
         'category'   => 4,
     ));

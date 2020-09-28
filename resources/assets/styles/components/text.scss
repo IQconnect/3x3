@@ -70,10 +70,16 @@
   @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(1.2)));
 }
 
+.contact {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (gutter_num(1.3), gutter_num(2.5)));
+}
+
 .follow {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(3)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(2), gutter_num(3)));
 }
 
 blockquote,

@@ -3,8 +3,8 @@
 @section('news')
 @php
 $title = $post->post_title;
-$dayname = get_field('dayname');
-$date = get_field('date');
+$id = $post-> ID;
+$date = get_the_date('Y-m-d',$id);
 
 @endphp
 

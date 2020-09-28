@@ -11,6 +11,5 @@ $post
 
 $post
     ->addTab('datawpisu', ['placement' => 'left'])
-        ->addDatePicker('date', ['label'=>'Data'])
     ->addFields(get_field_partial('partials.builder'));
 return $post;

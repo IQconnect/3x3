@@ -23,15 +23,32 @@
     transition: transform 0.4s ease;
     display: flex;
     align-items: center;
+    height: gutter(70);
 
-    @include cssLock("height", 360, 1920, (gutter_num(60), gutter_num(70)));
+    @include media("<=xl") {
+      height: gutter(60);
+    }
+
+    @include media("<=lg") {
+      height: gutter(60);
+    }
+
+    @include media("<=md") {
+      width: 50%;
+      height: gutter(50);
+    }
 
     @include media("<=sm") {
       width: 100%;
+      height: gutter(60);
     }
 
     &:hover {
       transform: scale(1.03);
+
+      @include media("<=sm") {
+        transform: scale(1);
+      }
     }
   }
 
@@ -44,7 +61,15 @@
     margin: 0 gutter(3.5);
     position: relative;
 
-    @include media("<=sm") {
+    @include media("<=lg") {
+      margin: 0 gutter(2.5);
+    }
+
+    @include media("<md") {
+      margin: 0 gutter(5.5);
+    }
+
+    @include media("<sm") {
       margin: 0 gutter(1.5);
     }
   }
@@ -77,6 +102,10 @@
     &:hover {
       transform: scale(1.05);
     }
+
+    @include media("<=sm") {
+      margin-top: gutter(1);
+    }
   }
 
   &__title {
@@ -92,7 +121,6 @@
     @extend %special;
     @extend .minor-text;
 
-    margin-left: gutter(2);
     font-weight: 400;
     color: $light;
 

@@ -28,7 +28,7 @@
 				$day = get_field('day', $id);
 				$month = get_field('month', $id);
 				$year = get_field('year', $id);
-				$date = ("$dayname $day.$month.$year");
+				$date = get_the_date('Y-m-d',$id);
 				$link = get_post_permalink($post->ID);
 				$thumbnail = get_post_thumbnail_id($post->ID);
 				@endphp
@@ -42,7 +42,7 @@
 						<div class="aktualnosci__title">
 						{!! $title !!}
 						</div>
-						@if($day)
+						@if($date)
 						<div class="aktualnosci__date">
 							{!! $date !!}
 							</div>

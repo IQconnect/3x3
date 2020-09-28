@@ -37,6 +37,10 @@ $color = $data['scolor'];
 										{!! $date !!}
 
 										</div>
+
+									</div>
+									<div class="calendar__imgwrapper">
+										{!! image($thumbnail, 'full', 'calendar__img') !!}
 									</div>
 										<p class="calendar__text" >{!! $title !!}</p>
 								</div>
