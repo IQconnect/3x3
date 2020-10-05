@@ -84,7 +84,7 @@
     border-radius: 15px;
     margin-top: gutter(5);
 
-    @include cssLock("height", 1366, 1920, (gutter_num(15), gutter_num(20)));
+    @include cssLock("height", 360, 1920, (gutter_num(15), gutter_num(20)));
 
     @include media("<=sm") {
       margin-top: gutter(2);

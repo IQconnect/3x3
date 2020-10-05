@@ -97,6 +97,11 @@
 
 .imp-wrap {
   margin: auto;
-  max-width: 1300px !important;
+  max-width: 1700px !important;
+
+  @include media("<=xl") {
+    max-width: 1300px !important;
+  }
+
   // @include cssLock("max-width", 360, 1920, (gutter_num(50), gutter_num(200)));
 }

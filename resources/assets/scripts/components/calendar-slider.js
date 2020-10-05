@@ -6,9 +6,13 @@ const slider = {
     this.slider = new Flickity('.calendar-carousel', {
       prevNextButtons: true,
       pageDots: false,
-      wrapAround: true,
+      wrapAround: false,
       autoPlay: false,
       bgLazyLoad: 1,
+      cellAlign: 'right',
+      rightToLeft: true,
+      contain: true,
+      groupCells: true,
     });
     this.resize();
   },

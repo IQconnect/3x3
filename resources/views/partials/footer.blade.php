@@ -18,7 +18,7 @@
       </h1>
     </div>
     <div class="footer__wrapper">
-      <a class="footer__brand" href="#">
+      <a class="footer__brand" href="{{ home_url('/#Start') }}">
         <img class="footer__image" src="{{ $brandlogo }}" alt="{{ option('brand')['alt'] }}">
       </a>
       <div class="footer__text">

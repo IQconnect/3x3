@@ -11,12 +11,12 @@
 
 @endphp
 
-<section class="section section--post aktualnosci section--black">
+<section class="section section--post post_calendar section--black">
 	<div class="container">
 		<h1 class="headline__title @if($color=='white')headline--black @else headline--white @endif">
 			Kalendarz
 			</h1>
-		<div class="aktualnosci__wrapper" >
+		<div class="post_calendar__wrapper" >
 			@if($work)
 			@foreach($work->posts as $post)
 
@@ -32,30 +32,27 @@
 				$link = get_post_permalink($post->ID);
 				$thumbnail = get_post_thumbnail_id($post->ID);
 				@endphp
-				<a class="aktualnosci__postcontent" href="{!! $link !!}">
+				<a class="post_calendar__postcontent" href="{!! $link !!}">
 					@if($thumbnail)
-					<div class="aktualnosci__postimage">
-					{!! image($thumbnail, 'full', ' aktualnosci__image') !!}
+					<div class="post_calendar__postimage">
+					{!! image($thumbnail, 'full', ' post_calendar__image') !!}
 					</div>
 					@endif
-					<div class="aktualnosci__content">
-						<div class="aktualnosci__title">
+					<div class="post_calendar__content">
+						<div class="post_calendar__title">
 						{!! $title !!}
 						</div>
 						@if($date)
-						<div class="aktualnosci__date">
+						<div class="post_calendar__date">
 							{!! $date !!}
 							</div>
 						@endif
-						<div class="aktualnosci__text">
-						{!! $desc !!}
-						</div>
 					</div>
 				</a>
 				@endforeach
 			@endif
 		</div>
-		<div class="aktualnosci__pagination">
+		<div class="post_calendar__pagination">
 		@php
     $args = array(
         'query' => $work,

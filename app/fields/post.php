@@ -10,6 +10,5 @@ $post
     ->setLocation('post_type', '==', 'post');
 
 $post
-    ->addTab('datawpisu', ['placement' => 'left'])
     ->addFields(get_field_partial('partials.builder'));
 return $post;

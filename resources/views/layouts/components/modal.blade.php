@@ -58,7 +58,7 @@
 								KLUB
 							</td>
 							<td>
-								{{ $club }}
+								{!!$club !!}
 							</td>
 						</tr>
 					@endif
@@ -67,7 +67,7 @@
 							OSIĄGNIĘCIE
 						</td>
 						<td>
-							{{ $best }}
+							{!! $best !!}
 						</td>
 					</tr>
 				</tbody>

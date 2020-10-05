@@ -44,8 +44,14 @@
   }
 
   &__logo {
-    @include cssLock("width", 360, 1920, (gutter_num(25), gutter_num(70)));
-    @include cssLock("height", 360, 1920, (gutter_num(25), gutter_num(70)));
+    @include cssLock("width", 360, 1920, (gutter_num(25), gutter_num(50)));
+
+    height: 100%;
+    margin-right: gutter(5);
+
+    @include media("<=md") {
+      margin-right: 0;
+    }
   }
 
   &__bimg {

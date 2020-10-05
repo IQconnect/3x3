@@ -16,14 +16,16 @@ $sponsors= $data['sinfo'];
 				$img = $element['sponsorimg'];
 				$stext = $element['sponsortext'];
 				$stitle = $element['sponsortitle'];
-				$slink = $element['sponsorlink']['url'];
+				$slink = $element['sponsorlink'];
 				$buttontext = $element['sponsorbutton']
 				@endphp
 						<div class="sponsor__cell">
 							<div class="sponsor__cellcontent">
+								@if($img)
 							<div class="sponsor__imgwrapper">
 								{!! image($img['id'], 'full', 'sponsor__img') !!}
 							</div>
+							@endif
 								<div class="sponsor__title">
 									{!! $stitle !!}
 								</div>
@@ -32,8 +34,8 @@ $sponsors= $data['sinfo'];
 									{!! $stext !!}
 								</div>
 								@endif
-								@if( $buttontext )
-								<a class="sponsor__button" href="{!! $slink !!}"> {!! $buttontext !!} </a>
+								@if( $slink )
+								<a class="sponsor__button" href="{!! $slink['url'] !!}"> {!! $buttontext !!} </a>
 								@endif
 							</div>
 						</div>

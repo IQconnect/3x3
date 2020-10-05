@@ -72,10 +72,52 @@
       @extend %absolute;
 
       max-width: 100%;
+
+      @include media("<sm") {
+        object-fit: contain;
+      }
     }
   }
 
-  + & {
-    padding-top: 0;
+  .flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+
+    @include media("<=sm") {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 25%;
+    top: 38%;
+
+    @include media("<=sm") {
+      left: 10%;
+      top: 53%;
+    }
+  }
+
+  .flickity-prev-next-button.next {
+    right: 69%;
+    top: 38%;
+
+    @include media("<=sm") {
+      right: 10%;
+      top: 53%;
+    }
+  }
+
+  .flickity-button {
+    background: none;
+    border: 5px solid $special;
+    color: $special;
+
+    &:hover {
+      background: $special;
+      color: $light;
+      border: 0;
+    }
   }
 }

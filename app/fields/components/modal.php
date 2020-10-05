@@ -21,7 +21,7 @@ $modal
         ->addText('wzrost', ['label' => 'Wzrost', 'wrapper' => ['width' => '30%']])
         ->addText('club', ['label' => 'Klub', 'wrapper' => ['width' => '30%']])
         ->addText('position', ['label' => 'Pozycja', 'wrapper' => ['width' => '30%']])
-        ->addText('best', ['label' => 'Największe osiągnięcie', 'wrapper' => ['width' => '30%']])
+        ->addWysiwyg('best', ['label' => 'Największe osiągnięcie', 'wrapper' => ['width' => '30%']])
         ->addText('rw', ['label' => 'Rzuty wolne', 'wrapper' => ['width' => '30%']])
         ->addText('pt2', ['label' => 'Rzuty za 2', 'wrapper' => ['width' => '30%']])
         ->addText('pt3', ['label' => 'Rzuty za 3', 'wrapper' => ['width' => '30%']])

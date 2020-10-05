@@ -39,17 +39,15 @@
 					</div>
 					@endif
 					<div class="aktualnosci__content">
-						<div class="aktualnosci__title">
-						{!! $title !!}
-						</div>
-						@if($date)
+							@if($date)
 						<div class="aktualnosci__date">
 							{!! $date !!}
 							</div>
 						@endif
-						<div class="aktualnosci__text">
-						{!! $desc !!}
+						<div class="aktualnosci__title">
+						{!! $title !!}
 						</div>
+
 					</div>
 				</a>
 				@endforeach

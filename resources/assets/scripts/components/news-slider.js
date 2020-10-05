@@ -9,6 +9,7 @@ const slider = {
       wrapAround: true,
       autoPlay: false,
       bgLazyLoad: 1,
+      cellAlign: 'left',
     });
     this.resize();
   },
