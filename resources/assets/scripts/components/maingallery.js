@@ -28,7 +28,7 @@ const Slider = {
         prevNextButtons: true,
         cellSelector: CELL,
         wrapAround: true,
-        autoPlay: true,
+        autoPlay: false,
       });
     });
   },

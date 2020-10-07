@@ -1,9 +1,10 @@
 	@php
-		$modal = $data['modal'];
+		$modal =  get_field('modal','option');
 	@endphp
 
 @foreach($modal as $item)
-		@php
+
+	@php
 			$img = $item['player']['image'];
 			$name = $item['player']['name'];
 			$nick = $item['player']['nick'];
@@ -19,7 +20,7 @@
 			$pr = $item['player']['pr'];
 			$as = $item['player']['as'];
 			$bl = $item['player']['bl'];
-@endphp
+	@endphp
 
 <section class="popup-flat" data-popup-flat="{{ $loop->index+1 }}">
 	<div class="modal">
@@ -34,110 +35,104 @@
 				<div class="modal__title">
 					{{ $nick }} #{{ $number }}
 				</div>
-				<table class="modal__tableinfo" >
-					<tbody>
-					<tr>
-						<td>
-							POZYCJA
-						</td>
-						<td>
-							{{ $position }}
-						</td>
-					</tr>
-					<tr>
-						<td>
-							WZROST
-						</td>
-						<td>
+				<div class="modal__tableinfo">
+					<div class="modal__info">
+						<p class="modal__text">
+						POZYCJA
+						</p>
+						<div class="modal__text--input">
+						{{ $position }}
+						</div>
+					</div>
+					<div class="modal__info">
+						<p class="modal__text">
+						WZROST
+						</p>
+						<div class="modal__text--input">
 							{{ $wzrost }}
-						</td>
-					</tr>
-					@if($club)
-						<tr>
-							<td>
-								KLUB
-							</td>
-							<td>
-								{!!$club !!}
-							</td>
-						</tr>
-					@endif
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__info">
+						<p class="modal__text">
+							KLUB
+						</p>
+						<div class="modal__text--input">
+							{!!$club !!}
+						</div>
+					</div>
+					<div class="modal__info">
+						<p class="modal__text">
 							OSIĄGNIĘCIE
-						</td>
-						<td>
+						</p>
+						<div class="modal__text--input">
 							{!! $best !!}
-						</td>
-					</tr>
-				</tbody>
-				</table>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="modal__statistic">
 				<div class="modal__caption">
 					Statystki
 				</div>
-					<table class="modal__table modal__table--stats">
-						<tbody >
 
-						<tr>
-							<td>
-								RW
-							</td>
-							<td class="modal__pt">
-								{{ $rw }}
-							</td>
-						</tr>
-					<tr>
-						<td>
+				<div class="modal__pool">
+					<div class="modal__spec">
+						<p class="modal__desc">
+							RW
+						</p>
+						<div class="modal__pt">
+							{{ $rw }}
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							2PKT.
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $pt2 }}
-						</td>
-					</tr>
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							3PKT.
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $pt3 }}
-						</td>
-					</tr>
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							ZB
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $zb }}
-						</td>
-					</tr>
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							PR
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $pr }}
-						</td>
-					</tr>
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							AS
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $as }}
-						</td>
-					</tr>
-					<tr>
-						<td>
+						</div>
+					</div>
+					<div class="modal__spec">
+						<p class="modal__desc">
 							BL
-						</td>
-						<td class="modal__pt">
+						</p>
+						<div class="modal__pt">
 							{{ $bl }}
-						</td>
-					</tr>
-				</tbody>
-				</table>
+						</div>
+					</div>
+				</div>
 	</div>
 </div>
 </section>

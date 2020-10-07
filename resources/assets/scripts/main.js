@@ -15,12 +15,14 @@ import './autoload/**/*';
 //import hero from './components/hero';
 //import header from './components/header';
 import imagemap from './components/image-map';
+import heroslider from './components/hero-slider';
 import fullpage from './components/fullpage';
 import hamburger from './components/hamburger';
 import newsslider from './components/news-slider';
 import calendar from './components/calendar-slider';
 import maingallery from './components/maingallery';
 import sponsorslider from './components/sponsor-slider';
+
 
 /** Populate Router instance with DOM routes */
 // const routes = new Router({
@@ -40,6 +42,9 @@ jQuery(document).ready(() => {
   fullpage.init();
   hamburger.init();
 
+  if($('.hero__selection').length) {
+    heroslider.init();
+  }
 
   if($('.hero__selection').length) {
     imagemap.init();

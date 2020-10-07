@@ -15,9 +15,16 @@
   align-items: center;
   border: 1px solid;
 
-  @include media("<lg") {
-    padding: 20px 10px;
+  @include media("<md") {
     flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media("<sm") {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
   &__close {
@@ -45,8 +52,12 @@
   }
 
   &__avatar {
-    @include cssLock("height", 360, 1920, (gutter_num(15), gutter_num(45)));
-    @include cssLock("width", 360, 1920, (gutter_num(10), gutter_num(40)));
+    @include cssLock("height", 360, 1920, (gutter_num(35), gutter_num(45)));
+    @include cssLock("width", 360, 1920, (gutter_num(30), gutter_num(40)));
+
+    @include media("<=lg") {
+      display: none;
+    }
   }
 
   &__img {
@@ -61,13 +72,11 @@
 
   &__content {
     text-align: left;
-  }
+    width: 500px;
 
-  &__info {
-    @extend .text;
-    @extend %special;
-
-    font-weight: 400;
+    @include media("<=md") {
+      width: 100%;
+    }
   }
 
   &__headline {
@@ -92,38 +101,43 @@
     @extend %special;
 
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     display: block;
     text-transform: uppercase;
-  }
-
-  &__pt {
-    color: $light;
-    font-weight: 800;
   }
 
   &__tableinfo {
     @extend %special;
 
     text-align: left;
-    border-collapse: collapse;
-    width: 400px;
+  }
 
-    td {
-      padding: gutter(2);
-    }
+  &__info {
+    @extend .text;
+    @extend %special;
 
-    tr {
-      border-bottom: 1px solid $light;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid $light;
 
-      :first-child {
-        padding: 0;
-      }
+    @include media("<sm") {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
   }
 
   &__statistic {
     margin: 0 gutter(5);
+    align-self: baseline;
+
+    @include media("<md") {
+      align-self: unset;
+    }
+
+    @include media("<sm") {
+      margin: 0;
+    }
   }
 
   &__caption {
@@ -132,8 +146,12 @@
 
     font-weight: 600;
     line-height: 1;
-    margin-bottom: gutter(1);
+    margin-bottom: gutter(4);
     text-transform: uppercase;
+
+    @include media("<sm") {
+      margin: gutter(2);
+    }
   }
 
   &__table {
@@ -149,19 +167,48 @@
     tr {
       border-bottom: 1px solid red;
     }
+  }
 
-    &--stats {
-      text-align: left;
-      width: 100%;
+  &__pool {
+    @extend .follow;
+    @extend %special;
 
-      td {
-        width: 100%;
-        padding: gutter(0.4) gutter(1);
-      }
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+    width: 100%;
 
-      tr {
-        border: none;
-      }
+    @include media("<sm") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__spec {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__desc {
+    padding: 0 gutter(1);
+    margin: 0;
+
+    @include media("<=md") {
+      padding: 0 gutter(1);
+      margin: 0;
+    }
+  }
+
+  &__pt {
+    color: $light;
+    font-weight: 800;
+    padding: 0 gutter(1);
+
+    @include media("<=md") {
+      padding: 0 gutter(1);
+      margin: 0;
     }
   }
 }

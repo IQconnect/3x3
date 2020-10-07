@@ -29,17 +29,17 @@
       </div>
       <div class="lg-pick footer__social">
         @if ($fb)
-        <a class="lg-pick__wrapper footer__icon" href="{!! $fb !!}">
+        <a target="_blank" class="lg-pick__wrapper footer__icon" href="{!! $fb !!}">
             <i class="fab fa-facebook-f"></i>
         </a>
         @endif
         @if ($inst)
-        <a class="lg-pick__wrapper footer__icon" href="{!! $inst!!}">
+        <a target="_blank" class="lg-pick__wrapper footer__icon" href="{!! $inst!!}">
             <i class="fab fa-instagram"></i>
         </a>
         @endif
     </div>
-      <a class="footer__logo" href="http://iqconnect.pl">
+      <a target="_blank" class="footer__logo" href="http://iqconnect.pl">
         <img class="footer__image" src="{{ option('iqlogo')['url'] }}" alt="{{ option('iqlogo')['alt'] }}">
       </a>
       <div class="footer__right">

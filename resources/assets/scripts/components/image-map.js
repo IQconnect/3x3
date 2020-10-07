@@ -83,6 +83,7 @@ const imageMap = {
 
                var pagefull = asd.Fullpage;
                pagefull.setAllowScrolling(false);
+               document.getElementsByTagName('body')[0]. style. overflow = 'hidden';
             });
         });
 
@@ -95,7 +96,11 @@ const imageMap = {
 
                 const $this = e.currentTarget;
                 console.log('click', $this.dataset.shapeTitle);
+
                 document.querySelector(`[data-popup-flat="${$this.dataset.shapeTitle}"]`).classList.add(this.class);
+                var pagefull = asd.Fullpage;
+                pagefull.setAllowScrolling(false);
+               document.getElementsByTagName('body')[0]. style. overflow = 'hidden';
             });
         });
 
@@ -108,6 +113,8 @@ const imageMap = {
 
               var pagefull = asd.Fullpage;
                pagefull.setAllowScrolling(true);
+
+               document.getElementsByTagName('body')[0]. style. overflow = 'visible';
           });
       });
     },

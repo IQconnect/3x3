@@ -6,3 +6,8 @@
   -webkit-transition: opacity 0.7s ease-out !important;
   transition: opacity 0.7s ease-out !important;
 }
+
+.fp-slidesNav ul li a,
+#fp-nav ul li a {
+  height: unset !important;
+}

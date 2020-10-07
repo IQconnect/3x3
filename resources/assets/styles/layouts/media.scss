@@ -108,7 +108,7 @@
     @extend %image;
 
     border-radius: 15px;
-    transition: 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out !important;
     filter: blur(0) brightness(60%);
   }
 }

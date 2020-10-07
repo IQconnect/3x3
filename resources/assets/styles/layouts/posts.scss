@@ -29,7 +29,7 @@
     font-weight: 400;
     background-color: $special;
     color: $light;
-    margin-bottom: gutter(5);
+    margin-bottom: gutter(1);
 
     @include cssLock("padding", 360, 1920, (gutter_num(0.5), gutter_num(1)));
   }

@@ -7,6 +7,17 @@
   position: relative;
   background: $black;
 
+  &__wrapper {
+    @include media(">md") {
+      display: none;
+    }
+  }
+
+  &__contain {
+    display: flex;
+    justify-content: center;
+  }
+
   &__selection {
     width: 100%;
     margin: auto;
@@ -16,29 +27,49 @@
     }
   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  &__carousel {
+    width: 70%;
+    border-radius: 15px;
   }
 
-  &__wrapper {
+  &__cell {
+    width: 40%;
+    height: 450px;
+    // border: 7px solid rgba(119, 118, 118, 0.3);
+    // border-radius: 15px;
+    transition: background-color 0.2s ease-in-out;
+
+    @include media("<=lg") {
+      width: 50%;
+      height: 500px;
+    }
+
+    @include media("<=sm") {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  &__cellcontent {
+    width: 100%;
     height: 100%;
   }
 
   &__content {
-    max-width: gutter(62);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
+    position: relative;
+    color: $light;
+    display: grid;
+    grid-template-rows: 1fr;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__img {
+    @extend %image;
   }
 
   &__title {
@@ -72,10 +103,6 @@
     margin-bottom: gutter(3.2);
   }
 
-  &__cell {
-    @extend %overlay;
-  }
-
   &__nav {
     @extend %absolute;
 
@@ -93,11 +120,40 @@
       display: none;
     }
   }
+
+  .flickity-prev-next-button {
+    @include media("<=md") {
+      width: gutter(10);
+      height: gutter(10);
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    @include media("<=md") {
+      left: -75px;
+    }
+  }
+
+  .flickity-prev-next-button.next {
+    @include media("<=md") {
+      right: -75px;
+    }
+  }
+
+  .flickity-button {
+    background: none;
+    color: rgba(119, 118, 118, 0.3);
+
+    &:hover {
+      color: $special;
+      border: 0;
+    }
+  }
 }
 
 .imp-wrap {
   margin: auto;
-  max-width: 1700px !important;
+  max-width: 1650px !important;
 
   @include media("<=xl") {
     max-width: 1300px !important;
