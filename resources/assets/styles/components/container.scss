@@ -9,12 +9,6 @@
     max-width: 1000px;
   }
 
-  &--mobilefix {
-    @include media("<md") {
-      padding: 0 !important;
-    }
-  }
-
   @include cssLock(
     "padding-left",
     360,
@@ -36,6 +30,12 @@
   @include media("<=md") {
     padding-left: gutter(5);
     padding-right: gutter(5);
+  }
+
+  &--mobilefix {
+    @include media("<=md") {
+      padding: 0 !important;
+    }
   }
 
   &--fluid {

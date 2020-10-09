@@ -16,9 +16,8 @@ const imageMap = {
         this.close = document.querySelectorAll(`[${CLOSE}]`);
         this.popups = document.querySelectorAll(`[${POPUP}]`);
         this.class = '-is-active';
-        this.darkclass= 'dark-active'
+        this.darkclass= 'dark-active';
         console.log('Image map init');
-
         const interval = setInterval(() => {
             console.log('setInterval', this.elem.length);
             this.elem = document.querySelectorAll(ELEM);
@@ -29,7 +28,6 @@ const imageMap = {
             }
         }, 100)
     },
-
 
 
     addEvent() {
@@ -81,8 +79,9 @@ const imageMap = {
                 console.log('click', $this.dataset.shapeTitle);
                 document.querySelector(`[data-popup-flat="${$this.dataset.shapeTitle}"]`).classList.add(this.class);
 
-               var pagefull = asd.Fullpage;
-               pagefull.setAllowScrolling(false);
+
+                var pagefull = asd.Fullpage;
+                pagefull.setAllowScrolling(false);
                document.getElementsByTagName('body')[0]. style. overflow = 'hidden';
             });
         });

@@ -4,7 +4,7 @@ const Flickity = require('flickity-bg-lazyload');
 const slider = {
   init() {
     this.slider = new Flickity('.news-carousel', {
-      prevNextButtons: false,
+      prevNextButtons: true,
       pageDots: false,
       wrapAround: true,
       autoPlay: false,

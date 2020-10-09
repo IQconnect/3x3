@@ -7,6 +7,10 @@
     margin: gutter(5) 0;
   }
 
+  @include media("<=md") {
+    margin-top: gutter(10);
+  }
+
   &--black {
     color: $black;
   }

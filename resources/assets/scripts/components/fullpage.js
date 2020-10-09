@@ -16,7 +16,7 @@ const Fullpage = {
       sectionSelector: '.fullscroll',
       autoScrolling: true,
       css3: false,
-      keyboardScrolling: false,
+      keyboardScrolling: true,
       responsiveWidth: 1100,
     });
   },

@@ -10,7 +10,7 @@
   position: absolute;
   top: 0;
   padding: gutter(0.5);
-  overflow: hidden;
+  //overflow: hidden;
 
   @include media("<lg") {
     position: fixed;
@@ -58,6 +58,29 @@
     @include media("<=lg") {
       width: gutter(10);
       height: gutter(10);
+    }
+
+    @include media("<=md") {
+      width: gutter(8);
+      height: gutter(8);
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media("<=md") {
+        display: block;
+      }
+
+      @include media("<=lg") {
+        width: gutter(10);
+        height: gutter(10);
+      }
+
+      @include media("<=xs") {
+        width: gutter(5);
+        height: gutter(5);
+      }
     }
   }
 

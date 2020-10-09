@@ -8,6 +8,14 @@
     justify-content: center;
     align-items: center;
     margin: 40px 0;
+
+    @include media("<=xl") {
+      margin: 0;
+    }
+
+    @include media("<=md") {
+      margin: 40px 0;
+    }
   }
 
   &__wrapper {

@@ -4,7 +4,7 @@ const Flickity = require('flickity-bg-lazyload');
 const sponsor = {
   init() {
     this.slider = new Flickity('.sponsor-carousel', {
-      prevNextButtons: false,
+      prevNextButtons: true,
       pageDots: false,
       wrapAround: true,
       autoPlay: false,

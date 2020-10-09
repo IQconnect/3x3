@@ -27,7 +27,7 @@ $color = $data['scolor'];
 						@endphp
 
 						<div class="calendar__cell">
-							<div class="calendar__cellcontent">
+							<a href="{{ $link }}" class="calendar__cellcontent">
 								<div class="calendar__content">
 									<div class="calendar__date">
 										<div class="calendar__datename">
@@ -35,16 +35,14 @@ $color = $data['scolor'];
 										</div>
 										<div class="calendar__datenumber">
 										{!! $date !!}
-
 										</div>
-
 									</div>
 									<div class="calendar__imgwrapper">
 										{!! image($thumbnail, 'full', 'calendar__img') !!}
 									</div>
 										<p class="calendar__text" >{!! $title !!}</p>
 								</div>
-							</div>
+							</a>
 						</div>
 					@endforeach
 				</div>

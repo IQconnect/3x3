@@ -4,6 +4,14 @@
   &__wrapper {
     width: 100%;
     margin: 40px 0;
+
+    @include media("<=xl") {
+      margin: 0;
+    }
+
+    @include media("<=md") {
+      margin: 40px 0;
+    }
   }
 
   &__carousel {
@@ -93,5 +101,10 @@
     @include media("<=md") {
       filter: brightness(40%);
     }
+  }
+
+  .flickity-button {
+    color: $special;
+    border: 0;
   }
 }
